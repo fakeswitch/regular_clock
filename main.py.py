@@ -76,7 +76,7 @@ while True:
     current_datetime = rtc.datetime()
     temperature = c_to_f(rtc.get_temperature())
     ftime = format_time(current_datetime.hour, current_datetime.minute)
-    day_date = (f"{days_of_week[current_datetime.weekday]}, "f"{current_datetime.year:04d}-{current_datetime.month:02d}-{current_datetime.day:02d} ")
+    day_date = (f"{days_of_week[current_datetime.weekday%7]}, "f"{current_datetime.year:04d}-{current_datetime.month:02d}-{current_datetime.day:02d} ")
     current_co2 = s8.co2()
 
     #text_width = wendy.measure_text("Wendy")
